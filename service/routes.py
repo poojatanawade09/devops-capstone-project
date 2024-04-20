@@ -121,11 +121,11 @@ def delete_accounts(account_id):
         Delete an Account
         This endpoint will delete an Account based on the posted data
     """
-        app.logger.info("Request to delete an Account with id: %s", account_id)
-        account = Account.find(account_id)
-        if account:
-            account.delete()
-        return "", status.HTTP_204_NO_CONTENT
+    app.logger.info("Request to delete an Account with id: %s", account_id)
+    account = Account.find(account_id)
+    if account:
+        account.delete()
+    return "", status.HTTP_204_NO_CONTENT
 
 
 ######################################################################
